@@ -41,3 +41,15 @@ for i in range(number_candidate):
     print(candidate_list[i]+":"+str(percentage[i])+"%"+"("+str(candidate_votes[i])+")")
 print("--------------------")
 print("Winner: "+winner)
+print("--------------------")
+
+text_file = open("Output.txt", "w")
+text_file.write("Election Results\n")
+text_file.write("--------------------\n")
+text_file.write("Total Votes: "+str(number_votes)+"\n")
+text_file.write("--------------------\n")
+for i in range(number_candidate):
+    text_file.write(candidate_list[i]+":"+str(percentage[i])+"%"+"("+str(candidate_votes[i])+")\n")
+text_file.write("--------------------\n")
+text_file.write("Winner: "+winner+"\n")
+text_file.write("--------------------\n")
